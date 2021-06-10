@@ -15,14 +15,15 @@ const db = mysql.createPool({
 
 module.exports.db = db;
 
-module.exports.query = (str) => {
+/*module.exports.query = (str) => {
    db.execute(str)
-      .then(result => {
-         return result[0].map(item => {
-            JSON.stringify(item)
-         })
+      .then(([rows, fields]) => {
+         return rows;
       })
       .catch(err => {
          console.log(err);
       });
+}*/
+module.exports.query = (str) => {
+   return db.execute(str)
 }
