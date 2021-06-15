@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const db = require('./db.js');
-const port = process.env.port || 3000;
+const port = process.env.port || 3030;
 const router = require('./routers/category.js')
 
 app.use(express.json());
